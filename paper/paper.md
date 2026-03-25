@@ -1,31 +1,36 @@
 ---
-title: 'BioHackEU23 report: Template for the very long title'
-title_short: 'BioHackEU23 #26: unknown chemical substances'
+title: 'SWAT4HCLS26 report: OpenMRS as a reference implementation platform for Electronic Health Records and Clinical Decision Support'
+title_short: 'SWAT4HCLS26: OpenMRS as reference implementation platform'
 tags:
-  - cheminformatics
-  - PubChem
-  - unknown chemical substances
+  - Reference Implementation
+  - Electronic Healthcare systems
+  - Health standards
+  - Teaching Medical Informatics
 authors:
-  - name: First Author
+  - name: Andra Waagmeester
+    orcid: 0000-0001-9773-4008
     affiliation: 1
     role: Writing – original draft
-  - name: Last Author
-    orcid: 0000-0000-0000-0000
+  - name: Stephanie "Ace" Medlock
+    orcid: 
+    affiliation: 1
+    role: Writing – original draft
+  - name: Claude Nanjo 
     affiliation: 2
-    role: Conceptualization, Writing – review & editing
+    role: Writing – original draft
 affiliations:
-  - name: First Affiliation
+  - name: Department of Medical Informatics, AmsterdamUMC, Location AMC Amsterdam, the Netherlands
     index: 1
-  - name: ELIXIR Europe
-    ror: 044rwnt51
+  - name: University of Utah
     index: 2
-date: 8 November 2023
+    
+date: 26 March 2026
 cito-bibliography: paper.bib
-event: BH23EU
-biohackathon_name: "BioHackathon Europe 2023"
-biohackathon_url:   "https://biohackathon-europe.org/"
-biohackathon_location: "Barcelona, Spain, 2023"
-group: Project 26
+event: SWAT4HCLS
+biohackathon_name: "Biohackathon SWAT4HCLS 2026"
+biohackathon_url:   "https://swat4hcls.org/"
+biohackathon_location: "AmsterdamUMC"
+group: OpenMRS
 # URL to project git repo --- should contain the actual paper.md:
 git_url: https://github.com/biohackrxiv/publication-template
 # This is the short authors description that is used at the
@@ -36,7 +41,21 @@ authors_short: First Author \emph{et al.}
 
 # Introduction
 
-As part of the BioHackathon Europe 2023, we here report...
+The broad goal for the OpenMRS table is: What steps are needed to use OpenMRS as a resource for reference implementations?
+
+This can be divided into 4 levels:
+
+1. Use OpenMRS as a data source, using its available APIs
+This is the easiest one. I will set up an OpenMRS instance that can be used, and provide the URL, some logins, and some instructions. The goal for anyone working on this will simply be to work on whatever demo they want to work on, using the APIs and the fake data provided by this system.
+
+2. Use OpenMRS running locally, so that you can directly access its database
+The instructions provided by the OpenMRS community for the newest version (O3) are actually not bad, and I have some detailed notes about how to do this on Linux that I can share with the group. I've never done it on Windows, but it can't be that hard. The goal for anyone working on this will be to come up with instructions for installing the system on Windows, and querying the database (e.g. from Python). This is probably what Claude Nanjo will need to start with.
+
+3. Add a module to OpenMRS
+This is the first step toward making modifications to OpenMRS itself. The OpenMRS community provides some "instructions for developers". The goal for anyone working on this will be to follow those instructions (and improve them where needed) with the goal of adding a simple module (I would suggest "add a clickable URL to the patient summary screen" as a good objective for MyFirstModule). This is what will be needed for Claude's goal, if OpenMRS does not already have a module that supports data entry for the data he needs for his idea.
+
+4. Build OpenMRS from source
+This is what we'll be working on. This is what you need if you want to change something in OpenMRS, rather than just adding something to it. The goal will be to come up with a set of instructions for how it can be bult from source... preferably in an executable format (e.g. a Makefile).
 
 ## Meeting information
 
