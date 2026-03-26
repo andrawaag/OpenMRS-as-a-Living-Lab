@@ -18,6 +18,10 @@ authors:
   - name: Claude Nanjo 
     affiliation: 2
     role: Writing – original draft
+  - name: Ronald Cornet
+    orcid: 0000-0002-1704-5980
+    affiliation: 1
+    role: Writing – original draft
 affiliations:
   - name: Department of Medical Informatics, AmsterdamUMC, Location AMC Amsterdam, the Netherlands
     index: 1
