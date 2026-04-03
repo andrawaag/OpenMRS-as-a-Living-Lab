@@ -15,7 +15,7 @@ authors:
     orcid: 
     affiliation: 1
     role: Writing – original draft
-  - Eric Herman
+  - name: Eric Herman
     orcid:
     affiliation:
     role: Conceptualization
