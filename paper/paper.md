@@ -82,6 +82,7 @@ docker compose restart backend (when stuck)
 Waited ~17 min for backend to finish loading
 Accessed http://localhost/openmrs/spa, logged in with admin / Admin123
 
+### Initial screen after succesful reference implementation
 <img width="1662" height="950" alt="image" src="https://github.com/user-attachments/assets/a10ce7ff-9338-479c-b1e2-401d6c51c7df" />
 
 
