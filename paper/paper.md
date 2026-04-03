@@ -15,6 +15,10 @@ authors:
     orcid: 
     affiliation: 1
     role: Writing – original draft
+  - Eric Herman
+    orcid:
+    affiliation:
+    role: Conceptualization
   - name: Claude Nanjo 
     affiliation: 2
     role: Writing – original draft
