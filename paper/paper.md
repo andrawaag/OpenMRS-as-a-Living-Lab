@@ -69,6 +69,21 @@ This is what we'll be working on. This is what you need if you want to change so
 - https://gitlab.com/ericherman/openmrs-sandbox
 - https://gitlab.com/openmrs_education/openmrs-sdk-sandbox
 
+## Install reference implementation
+```
+gh repo clone openmrs/openmrs-distro-referenceapplication
+cd openmrs-distro-referenceapplication
+docker compose up (or docker compose up -d)
+```
+Waited — saw empty screen / 504s for ~30 min (first-time data load)
+```
+docker compose restart backend (when stuck)
+```
+Waited ~17 min for backend to finish loading
+Accessed http://localhost/openmrs/spa, logged in with admin / Admin123
+
+<img width="1662" height="950" alt="image" src="https://github.com/user-attachments/assets/a10ce7ff-9338-479c-b1e2-401d6c51c7df" />
+
 
 
 ### Contributor Role Taxonomy
@@ -85,6 +100,8 @@ authors:
     orcid: 0000-0000-0000-0000
     role: Conceptualization, Writing – review & editing
 ```
+
+
 
 ### A full examples
 
