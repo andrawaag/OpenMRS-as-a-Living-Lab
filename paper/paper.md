@@ -65,6 +65,10 @@ This is the first step toward making modifications to OpenMRS itself. The OpenMR
 4. Build OpenMRS from source
 This is what we'll be working on. This is what you need if you want to change something in OpenMRS, rather than just adding something to it. The goal will be to come up with a set of instructions for how it can be bult from source... preferably in an executable format (e.g. a Makefile).
 
+## Objective
+![Long term vision](./TeachEHR.png)
+
+
 ## Sources:
 - https://gitlab.com/ericherman/openmrs-sandbox
 - https://gitlab.com/openmrs_education/openmrs-sdk-sandbox
