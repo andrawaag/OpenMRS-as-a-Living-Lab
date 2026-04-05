@@ -22,6 +22,10 @@ authors:
   - name: Claude Nanjo 
     affiliation: 2
     role: Writing – original draft
+  - name: Chang Sun
+    orcid: 0000-0001-8325-8848
+    affiliation: 3
+    role: Conceptualization
   - name: Ronald Cornet
     orcid: 0000-0002-1704-5980
     affiliation: 1
@@ -31,6 +35,7 @@ affiliations:
     index: 1
   - name: University of Utah
     index: 2
+  - name: DACS - Data Department of Advanced Computing Sciences, Faculty of Science and Engineering, Maastricht, the Netherlands
     
 date: 26 March 2026
 cito-bibliography: paper.bib
