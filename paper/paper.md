@@ -12,7 +12,7 @@ authors:
     affiliation: 1
     role: Writing – original draft
   - name: Stephanie "Ace" Medlock
-    orcid: 
+    orcid: 0000-0002-2679-8095
     affiliation: 1
     role: Writing – original draft
   - name: Eric Herman
@@ -62,21 +62,23 @@ This can be divided into 4 levels:
 This is the easiest one. I will set up an OpenMRS instance that can be used, and provide the URL, some logins, and some instructions. The goal for anyone working on this will simply be to work on whatever demo they want to work on, using the APIs and the fake data provided by this system.
 
 2. Use OpenMRS running locally, so that you can directly access its database
-The instructions provided by the OpenMRS community for the newest version (O3) are actually not bad, and I have some detailed notes about how to do this on Linux that I can share with the group. I've never done it on Windows, but it can't be that hard. The goal for anyone working on this will be to come up with instructions for installing the system on Windows, and querying the database (e.g. from Python). This is probably what Claude Nanjo will need to start with.
+The instructions provided by the OpenMRS community for the newest version (O3) are not bad, and I have some detailed notes about how to do this on Linux (see below). I've never done it on Windows. The goal for anyone working on this will be to come up with instructions for installing the system on Windows, and querying the database (e.g. from Python). This is what is needed to have a standalone application running alongside OpenMRS that uses its database.
 
 3. Add a module to OpenMRS
-This is the first step toward making modifications to OpenMRS itself. The OpenMRS community provides some "instructions for developers". The goal for anyone working on this will be to follow those instructions (and improve them where needed) with the goal of adding a simple module (I would suggest "add a clickable URL to the patient summary screen" as a good objective for MyFirstModule). This is what will be needed for Claude's goal, if OpenMRS does not already have a module that supports data entry for the data he needs for his idea.
+This is the first step toward making modifications to OpenMRS itself. The OpenMRS community provides some "instructions for developers". The goal for anyone working on this will be to follow those instructions (and improve them where needed) with the goal of adding a simple module (I would suggest "add a clickable URL to the patient summary screen" as a good objective for MyFirstModule). This is what is needed to embed new functionality in OpenMRS.
 
 4. Build OpenMRS from source
-This is what we'll be working on. This is what you need if you want to change something in OpenMRS, rather than just adding something to it. The goal will be to come up with a set of instructions for how it can be bult from source... preferably in an executable format (e.g. a Makefile).
+This is what you need if you want to change something in OpenMRS, rather than just adding something to it. The goal will be to come up with a set of instructions for how it can be bult from source... preferably in an executable format.
+
+A secondary objective is defining a roadmap for using OpenMRS as a teaching resource in medical informatics education. The electronic health record (EHR) is _the_ central piece of software in front line health care; this implies that understanding how an EHR works is an important part of a medical informatics curriculum. Open source EHRs allow students to look "under the hood" in a way that isn't possible with closed-source products.
 
 ## Objective
 ![Long term vision](./TeachEHR.png)
 
 
 ## Sources:
-- https://gitlab.com/ericherman/openmrs-sandbox
-- https://gitlab.com/openmrs_education/openmrs-sdk-sandbox
+- Level 3 (OpenMRS development): https://gitlab.com/openmrs_education/openmrs-sdk-sandbox
+- Level 4 (OpenMRS from source): https://gitlab.com/ericherman/openmrs-sandbox
 
 ## Install reference implementation
 ```
