@@ -13,18 +13,18 @@ authors:
     role: Writing – original draft
   - name: Stephanie "Ace" Medlock
     orcid: 0000-0002-2679-8095
-    affiliation: 1
+    affiliation: 1,2
     role: Writing – original draft
   - name: Eric Herman
     orcid:
-    affiliation:
+    affiliation: 2,3
     role: Conceptualization
   - name: Claude Nanjo 
-    affiliation: 2
+    affiliation: 4
     role: Writing – original draft
   - name: Chang Sun
     orcid: 0000-0001-8325-8848
-    affiliation: 3
+    affiliation: 5
     role: Conceptualization
   - name: Ronald Cornet
     orcid: 0000-0002-1704-5980
@@ -33,8 +33,12 @@ authors:
 affiliations:
   - name: Department of Medical Informatics, AmsterdamUMC, Location AMC Amsterdam, the Netherlands
     index: 1
-  - name: University of Utah
+  - name: Stichting OpenElectronicsLab, The Netherlands
     index: 2
+  - name: Commons Caretakers B.V., Amsterdam, The Netherlands
+    index: 3
+  - name: University of Utah
+    index: 4
   - name: DACS - Data Department of Advanced Computing Sciences, Faculty of Science and Engineering, Maastricht, the Netherlands
     
 date: 26 March 2026
