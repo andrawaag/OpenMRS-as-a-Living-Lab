@@ -58,29 +58,43 @@ authors_short: First Author \emph{et al.}
 
 # Introduction
 
-The broad goal for the OpenMRS table is: What steps are needed to use OpenMRS as a resource for reference implementations?
+Electronic health records (EHRs) have become the central piece of software in modern health care. [Shen2025] Most patient care is documented and managed in the EHR, and consequently, it has long been understood that functionality to support clinical decisions should also be integrated into the EHR. [Kawamoto2005] However, shareability of clinical decision support systems (CDSSs) is a longstanding challenge, partly due to limited interoperability of EHRs. [Sittig2007, Shen2025] This makes it difficult for researchers to show how a CDSS - especially a novel CDSS - could be integrated into an EHR. Innovations in CDSSs can be disseminiated by publishing a specification, but a reference implementation for the CDSS would help potential users imagine how the CDSS could be integrated into their workflow and support them in practice, and help technical implementers understand what is required to fully implement the specification as an EHR-integrated CDSS. 
+
+Open-source EHRs offer a unique opportunity for CDSS researchers to create a reference implementation that demonstrates their vision on how their CDSS can be integrated with an EHR and the clinial workflow. The open-source licensing model gives users the freedom to adapt the software to their needs, [gnu.org] from simply using or adding functionality that implements existing interoperability standards, to adding new functionality that demonstrates novel means of deeply integrating new kinds of support.
+
+Additionally, open-source EHRs offer unique opportunities for educating medical informatics professionals. EHRs are central to modern health care, but many medical informatics students never get hands-on experience with an EHR until after graduation. The open-source licensing model also gives users the "freedom to inspect," [gnu.org] meaning that students can "look under the hood" of an EHR, as well as gain hands-on experience with various secondary uses of the EHR, including uses which require interoperability.
+
+Due to the authors' previous experience with OpenMRS, [Medlock2022] OpenMRS was chosen as the target system for our Biohackathon table. The broad goal for the OpenMRS table was: What steps are needed to use OpenMRS as a resource for reference implementations?
 
 This can be divided into 4 levels:
 
 1. Use OpenMRS as a data source, using its available APIs
-This is the easiest one. I will set up an OpenMRS instance that can be used, and provide the URL, some logins, and some instructions. The goal for anyone working on this will simply be to work on whatever demo they want to work on, using the APIs and the fake data provided by this system.
+A copy of the reference implementation for OpenMRS [OpenMRS] was created, with demo data, and provided for use during the BioHackathon. The goal for this level is simply to see if a demo application for any desired functionality can be implemented simply by using the APIs that are already preset in the OpenMRS reference implementation. (Note: The OpenMRS reference implementation should not be confused with a reference implentation for new CDSS functionality. The OpenMRS reference implementation shows how OpenMRS can be implemented; our goal is to implement a reference implementation for novel CDSS functinality _integrated with_ OpenMRS.)
 
-2. Use OpenMRS running locally, so that you can directly access its database
-The instructions provided by the OpenMRS community for the newest version (O3) are not bad, and I have some detailed notes about how to do this on Linux (see below). I've never done it on Windows. The goal for anyone working on this will be to come up with instructions for installing the system on Windows, and querying the database (e.g. from Python). This is what is needed to have a standalone application running alongside OpenMRS that uses its database.
+2. Use OpenMRS running locally, and directly access its database
+The OpenMRS community provides instructions for installing OpenMRS on a local computer. [OpenMRS2] The goal for this level is to follow the provided instructions, create more detailed instructions if needed, and then build a demo application that queries the OpenMRS database. This can be used for applications that need to use the data from an EHR, but do not need to interact with users via the EHR interface.
 
 3. Add a module to OpenMRS
-This is the first step toward making modifications to OpenMRS itself. The OpenMRS community provides some "instructions for developers". The goal for anyone working on this will be to follow those instructions (and improve them where needed) with the goal of adding a simple module (I would suggest "add a clickable URL to the patient summary screen" as a good objective for MyFirstModule). This is what is needed to embed new functionality in OpenMRS.
+This is the first step toward making modifications to OpenMRS itself. The OpenMRS community provides some "instructions for developers". [OpenMRS3] The goal for this level is to follow those instructions (and improve them where needed) with the goal of adding a simple module (e.g. "add a clickable URL to the patient summary screen"). This is what is needed to embed new functionality in OpenMRS.
 
 4. Build OpenMRS from source
-This is what you need if you want to change something in OpenMRS, rather than just adding something to it. The goal will be to come up with a set of instructions for how it can be bult from source... preferably in an executable format.
+To make deep changes to OpenMRS, rather than just adding something to it, new functionality may need to be added to existing OpenMRS modules. The goal of this level is to produce instructions for building a minimum viable installation of OpenMRS from source.
 
-A secondary objective is defining a roadmap for using OpenMRS as a teaching resource in medical informatics education. The electronic health record (EHR) is _the_ central piece of software in front line health care; this implies that understanding how an EHR works is an important part of a medical informatics curriculum. Open source EHRs allow students to look "under the hood" in a way that isn't possible with closed-source products.
+An additional goal of this table is to produce a "roadmap" for EHR education, describing what medical informatics students should learn about an EHR and how an open source EHR could be leveraged to teach it.
 
 ## Objective
 ![Long term vision](./TeachEHR.png)
 
 
 ## Sources:
+- Shen Y, Yu J, Zhou J, Hu G. Twenty-Five Years of Evolution and Hurdles in Electronic Health Records and Interoperability in Medical Research: Comprehensive Review. J Med Internet Res. 2025 Jan 9;27:e59024. doi: 10.2196/59024.
+- Kawamoto K, Houlihan CA, Balas EA, Lobach DF. Improving clinical practice using clinical decision support systems: a systematic review of trials to identify features critical to success. BMJ. 2005 Apr 2;330(7494):765. doi: 10.1136/bmj.38398.500764.8F.
+- Sittig DF, Wright A, Osheroff JA, Middleton B, Teich JM, Ash JS, Campbell E, Bates DW. Grand challenges in clinical decision support. J Biomed Inform. 2008 Apr;41(2):387-92. doi: 10.1016/j.jbi.2007.09.003. 
+- https://www.gnu.org/philosophy/free-sw.en.html accessed 2026-04-09
+- Medlock S, Ploegmakers KJ, Cornet R, Pang KW. Use of an open-source electronic health record to establish a "virtual hospital": A tale of two curricula. Int J Med Inform. 2023 Jan;169:104907. doi: 10.1016/j.ijmedinf.2022.104907.
+- https://github.com/openmrs/openmrs-distro-referenceapplication accessed 2026-04-09
+- https://openmrs.atlassian.net/wiki/spaces/docs/pages/150930190/Set+Up+an+Instance+of+O3  accessed 2026-04-09
+- https://openmrs.atlassian.net/wiki/spaces/docs/pages/25477022/Getting+Started+as+a+Developer accessed 2026-04-09
 - Level 3 (OpenMRS development): https://gitlab.com/openmrs_education/openmrs-sdk-sandbox
 - Level 4 (OpenMRS from source): https://gitlab.com/ericherman/openmrs-sandbox
 
