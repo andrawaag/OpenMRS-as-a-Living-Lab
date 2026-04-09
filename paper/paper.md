@@ -82,7 +82,15 @@ To make deep changes to OpenMRS, rather than just adding something to it, new fu
 
 An additional goal of this table is to produce a "roadmap" for EHR education, describing what medical informatics students should learn about an EHR and how an open source EHR could be leveraged to teach it.
 
-## Objective
+## Open-Source EHR as a reference implementation
+- Level 1 (OpenMRS APIs): We noted that the version of FHIR implemented in the OpenMRS reference implementation is quite old, thus contributing to the maintainence of the FHIR module may be a good long-term goal. [OpenMRS_FHIR2]
+- Level 2: (OpenMRS local installation): See notes below
+- Level 3 (OpenMRS development): https://gitlab.com/openmrs_education/openmrs-sdk-sandbox
+- Level 4 (OpenMRS from source): https://gitlab.com/ericherman/openmrs-sandbox
+
+## Open-Source EHR in Medical Informatics Education
+The figure below describes a long-term vision for using an open-source EHR in medical informatics education. Prerequisites are that students can install the software (and any supporting software that's needed) without needing deep knowledge of system administration. The use cases describe a mix of education and research goals (which have considerable overlap in our education program, since it includes education about research methods). 
+
 ![Long term vision](./TeachEHR.png)
 
 
@@ -95,10 +103,24 @@ An additional goal of this table is to produce a "roadmap" for EHR education, de
 - https://github.com/openmrs/openmrs-distro-referenceapplication accessed 2026-04-09
 - https://openmrs.atlassian.net/wiki/spaces/docs/pages/150930190/Set+Up+an+Instance+of+O3  accessed 2026-04-09
 - https://openmrs.atlassian.net/wiki/spaces/docs/pages/25477022/Getting+Started+as+a+Developer accessed 2026-04-09
-- Level 3 (OpenMRS development): https://gitlab.com/openmrs_education/openmrs-sdk-sandbox
-- Level 4 (OpenMRS from source): https://gitlab.com/ericherman/openmrs-sandbox
+- https://github.com/openmrs/openmrs-module-fhir2 accessed 2026-04-09
+
 
 ## Install reference implementation
+### Linux
+  To install on Linux:
+  ```
+  apt update
+  apt install docker-compose-v2
+  git clone https://github.com/openmrs/openmrs-distro-referenceapplication.git
+  cd openmrs-distro-referenceapplication
+  git tag --sort=-v:refname
+  TAG=3.5.0 docker compose -f docker-compose.yml up -d
+  ```
+  The tag number is replaced with the latest tag number (or whichever you choose from the list produced by the previous command). After a few minutes, the installation UI can be accessed at http://localhost:8080/openmrs/ . The initial configuration can be done here. After 15-45 minutes (depending on the speed of the underlying machine) the O3 UI can be accessed at http://localhost:8080/openmrs/spa/home . The default login is username: admin, password: Admin123 .
+
+
+### Windows
 ```
 gh repo clone openmrs/openmrs-distro-referenceapplication
 cd openmrs-distro-referenceapplication
