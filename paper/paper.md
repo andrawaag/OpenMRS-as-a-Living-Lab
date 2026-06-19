@@ -19,7 +19,8 @@ authors:
     orcid:
     affiliation: 2,3
     role: Conceptualization
-  - name: Claude Nanjo 
+  - name: Claude Nanjo
+    orcid: 0009-0002-1208-8858
     affiliation: 4
     role: Writing – original draft
   - name: Chang Sun
